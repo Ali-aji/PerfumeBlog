@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'perfumeblog',
     'ckeditor',
     'taggit',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [
