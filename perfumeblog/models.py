@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.urls import reverse
-# from ckeditor_uploader.fields import RichTextUploadingField
+from ckeditor_uploader.fields import RichTextUploadingField
 from django.utils.text import slugify
 
 
@@ -27,8 +27,8 @@ class Post(models.Model):
     # image = models.ImageField(upload_to='featured_image/%Y/%m/%d/', blank=True, null=True) #this
 
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
-    body = models.TextField()  # remove this
-    # body=RichTextUploadingField() # add this
+    # body = models.TextField()  # remove this
+    body=RichTextUploadingField() # add this
 
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
