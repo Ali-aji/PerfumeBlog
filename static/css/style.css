@@ -12,3 +12,7 @@ article img{
 .featured-image-list{
     object-fit: cover;
 }
+
+.navbar-custom {
+    background-color: #ffc0cb;
+}
